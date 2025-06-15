@@ -19,15 +19,50 @@ export class LoginPage {
     }
 
     async login(username: string, password: string) {
-        await this.page.fill(this.usernameInput, username);
-        await this.page.fill(this.passwordInput, password);
-        await this.page.click(this.submitButton);
+        try {
+            console.log('Navigating to login page...');
+            await this.page.goto(config.loginUrl);
+            
+            console.log('Filling username...');
+            await this.page.fill(this.usernameInput, username);
+            
+            console.log('Filling password...');
+            await this.page.fill(this.passwordInput, password);
+            
+            console.log('Waiting for submit button...');
+            await this.page.waitForSelector(this.submitButton, { state: 'visible', timeout: 5000 });
+            
+            console.log('Clicking submit button...');
+            await this.page.click(this.submitButton);
+            
+            console.log('Waiting for navigation...');
+            await this.page.waitForLoadState('networkidle');
+        } catch (error) {
+            console.error('Login failed:', error);
+            throw error;
+        }
     }
 
     async loginWithEnterKey(username: string, password: string) {
-        await this.page.fill(this.usernameInput, username);
-        await this.page.fill(this.passwordInput, password);
-        await this.page.press(this.passwordInput, 'Enter');
+        try {
+            console.log('Navigating to login page...');
+            await this.page.goto(config.loginUrl);
+            
+            console.log('Filling username...');
+            await this.page.fill(this.usernameInput, username);
+            
+            console.log('Filling password...');
+            await this.page.fill(this.passwordInput, password);
+            
+            console.log('Pressing Enter key...');
+            await this.page.press(this.passwordInput, 'Enter');
+            
+            console.log('Waiting for navigation...');
+            await this.page.waitForLoadState('networkidle');
+        } catch (error) {
+            console.error('Login with Enter key failed:', error);
+            throw error;
+        }
     }
 
     async getErrorMessage(): Promise<string> {

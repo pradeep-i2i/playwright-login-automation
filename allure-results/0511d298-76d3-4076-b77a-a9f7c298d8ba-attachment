@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- link "Press \"Enter\" to skip to content":
+  - /url: "#main-container"
+- banner:
+  - navigation
+  - link "Practice Test Automation":
+    - /url: https://practicetestautomation.com/
+    - img "Practice Test Automation"
+  - navigation:
+    - navigation:
+      - list:
+        - listitem:
+          - link "Home":
+            - /url: https://practicetestautomation.com/
+        - listitem:
+          - link "Practice":
+            - /url: https://practicetestautomation.com/practice/
+        - listitem:
+          - link "Courses":
+            - /url: https://practicetestautomation.com/courses/
+        - listitem:
+          - link "Blog":
+            - /url: https://practicetestautomation.com/blog/
+        - listitem:
+          - link "Contact":
+            - /url: https://practicetestautomation.com/contact/
+- main:
+  - article:
+    - heading "Logged In Successfully" [level=1]
+    - paragraph:
+      - strong: Congratulations student. You successfully logged in!
+    - link "Log out":
+      - /url: https://practicetestautomation.com/practice-test-login/
+    - paragraph
+- contentinfo:
+  - text: © Copyright 2020
+  - link "Practice Test Automation.":
+    - /url: https://practicetestautomation.com/
+  - text: All rights reserved |
+  - link "Privacy Policy":
+    - /url: https://practicetestautomation.com/privacy-policy/
+```
