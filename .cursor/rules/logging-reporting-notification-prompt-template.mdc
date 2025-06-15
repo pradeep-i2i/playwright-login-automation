@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You are acting as a Senior QA Automation Engineer (9+ years experience).
+Now prepare the error handling, logging, reporting, and notifications design.
+
+Follow these rules:
+
+Centralized exception handling (timeouts, retries, categorization)
+
+API request/response logs
+
+UI failure screenshots
+
+Stack traces on failures
+
+Reporting:
+
+Pass/fail summary
+
+Execution time
+
+Failure logs
+
+Notifications via Slack, Email, Teams
+
+Optional: Jira integration (Zephyr/Xray), Testcontainers for dependency management
+
+
+DO NOT write code yet — only provide the design and plan.

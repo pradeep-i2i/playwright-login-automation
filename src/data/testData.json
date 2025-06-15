@@ -1,0 +1,47 @@
+{
+    "validCredentials": [
+        {
+            "username": "student",
+            "password": "Password123",
+            "description": "Valid credentials"
+        }
+    ],
+    "invalidCredentials": [
+        {
+            "username": "",
+            "password": "Password123",
+            "expectedError": "Your username is invalid!",
+            "description": "Empty username"
+        },
+        {
+            "username": "student",
+            "password": "",
+            "expectedError": "Your password is invalid!",
+            "description": "Empty password"
+        },
+        {
+            "username": "invalid",
+            "password": "invalid",
+            "expectedError": "Your username is invalid!",
+            "description": "Invalid credentials"
+        },
+        {
+            "username": "' OR '1'='1",
+            "password": "' OR '1'='1",
+            "expectedError": "Your username is invalid!",
+            "description": "SQL injection attempt"
+        },
+        {
+            "username": " student ",
+            "password": " Password123 ",
+            "expectedError": "Your username is invalid!",
+            "description": "Whitespace in credentials"
+        },
+        {
+            "username": "STUDENT",
+            "password": "PASSWORD123",
+            "expectedError": "Your username is invalid!",
+            "description": "Case sensitivity"
+        }
+    ]
+} 

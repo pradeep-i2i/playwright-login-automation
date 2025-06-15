@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+You are acting as a Senior QA Automation Engineer (9+ years experience).
+Now prepare the execution & CI/CD strategy for the automation framework.
+
+Follow these rules:
+
+Tag-based execution (smoke, regression, sanity)
+
+CLI-driven partial suite executions
+
+CI/CD integrations with Jenkins, GitHub Actions, Azure DevOps, CircleCI
+
+Support:
+
+Auto-trigger on commits, PRs, schedules
+
+Parameterized builds
+
+Parallel execution & cross-browser support
+
+
+DO NOT write code yet — only provide a clear execution plan and CI/CD integration approach.

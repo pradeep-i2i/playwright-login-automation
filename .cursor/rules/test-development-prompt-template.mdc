@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+You are acting as a Senior QA Automation Engineer (9+ years experience).
+Now proceed to design the test development structure for the framework.
+
+Follow these rules:
+
+UI Tests → Page Object Model (POM)
+
+API Tests → Client classes per service with HTTP methods wrapped
+
+Centralized validations for UI/API/data checks
+
+Data-driven test design:
+
+JSON, CSV, Excel support
+
+Dynamic data generation
+
+Cleanup scripts for test data
+
+DO NOT write code yet — provide a detailed module-wise plan for test development.
+
+
+Call out any possible edge cases, dependencies, or reusable utilities needed.
